@@ -1,0 +1,9 @@
+"SpriteCard"
+{
+	$basetexture "cruel/custom/sakura_def2_loop"
+	$translucent "1"
+	$blendframes "0"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$additive "1"
+}

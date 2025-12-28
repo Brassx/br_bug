@@ -1,0 +1,10 @@
+"SpriteCard"
+{
+	$basetexture "cruel/custom/sakura_animloop_glow"
+	$translucent "1"
+	$blendframes "0"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$additive "1"
+	$overbrightfactor 1.2
+}
