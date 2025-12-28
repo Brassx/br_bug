@@ -15,13 +15,6 @@ function EFFECT:Init(data)
         self.PSy:SetControlPoint(1, Vector(self.Radius, 0, 0))
         self.PSy:SetControlPoint(2, Vector(self.Radius, 0, 0))
     end
-
-    if (data:GetFlags() or 0) == 0 then
-        BR_SOUND_DOWNLOAD:PlaySound3D(CDN_URL .. "/br_sounds/spells/magic_elemental_fire_35.ogg", self.Pos, 200, 100, 1, function(snd)
-            self.snd = snd
-            snd:ChangePlaybackRate(2, self.LifeTime * 0.95)
-        end)
-    end
 end
 
 function EFFECT:Think()
@@ -71,11 +64,6 @@ function EFFECT_PROC:Init(data)
     self.PSy = CreateParticleSystemNoEntity("br_castle_flamespire_proc_main", self.Pos, angle_zero)
     if IsValid(self.PSy) then
         self.PSy:SetControlPoint(1, Vector(1, self.Radius / 128, 1))
-    end
-
-    if (data:GetFlags() or 0) == 0 then
-        local snd = CDN_URL .. "/br_sounds/exp/Missile Launch Close 001.mp3"
-        sound.Play(snd, self.Pos, 400, math.random(90, 110), 1)
     end
 end
 
